@@ -20,14 +20,14 @@ class Chat extends Component {
     }
     
     componentDidMount(){
-        //this.socket =mySocket("http://localhost:10001");
+       //this.socket=mySocket("https://spacesockets.herokuapp.com/");
     }
     
     joinChat(){
         this.setState({
             mode:1
         })
-        this.socket =mySocket("http://localhost:10001");
+        this.socket =mySocket("https://spacesockets.herokuapp.com/");
             //send the username entered in the input to the socket server
         this.socket.emit("uname", this.state.myname);
         this.socket.on("names", (data)=>{
