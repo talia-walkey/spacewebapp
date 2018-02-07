@@ -1,0 +1,170 @@
+.App {
+    text-align: center;
+}
+    
+    #aimg {
+        width: 300px;
+        height: auto;
+        z-index: 101;
+        position: absolute;
+        top: 30%;
+        right: 30%;
+    }  
+    
+        #timg {
+        width: 330px;
+        height: auto;
+        z-index: 101;
+        position: absolute;
+        top: 55%;
+        left: 30%;
+    }   
+    
+.nameHeading{
+    font-size: 18pt;
+}
+    
+    #speechleft {
+        z-index: 90;
+        position: absolute;
+        top: 55%;
+        left: 5%;
+        width: 400px;
+        height: auto;
+    }
+    
+        #speechright {
+        z-index: 90;
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        width: 400px;
+        height: auto;
+    }
+    
+#tbioBkg {
+    text-align: left;
+    width: 20%;
+    height: 400px;
+    position: absolute;
+    left: 8%;
+    top: 58%;
+    z-index: 100;
+}
+#abioBkg {
+    text-align: left;
+    width: 20%;
+    height: 350px;
+    position: absolute;
+    right: 8%;
+    top: 18%;
+    z-index: 100;
+}
+#abioImg{
+    height: 300px;
+    margin: auto;
+}
+#tbioImg{
+    height: 300px;
+    margin: auto;
+}
+.leftBox{
+    left: 0px;
+    position: absolute;
+    width: 40%;
+    margin: auto;
+}
+.rightBox{
+    right: 10%;
+    position: absolute;
+    width: 60%;
+    margin: auto;
+}
+#bkgImg{
+    width:100%;
+    position: relative;
+    left: 0;
+    z-index: 2;
+}
+#topPage{
+    
+}
+
+#tname {
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 85%;
+    color: white;
+}
+
+#aname {
+    position: absolute;
+    z-index: 1000;
+    right: 10%;
+    top: 45%;
+    color: white;
+}
+
+#findOutMore{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 25%;
+    height: 8%;
+    z-index: 100;
+}
+#welcomeDiv{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 8%;
+    z-index: 100;
+    font-size: 30pt;
+    color: white;
+}
+#introBio{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    text-align: left;
+}
+
+#chatDiv{
+    position: absolute;
+    top: 0;
+    z-index: 200;
+    background-color: rgba(255,255,255,0.0);
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+#chatButton{
+    width: 400px;
+    height: 100px;
+    z-index: 300;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-size: 16pt;
+}
+#allNames{
+    width: 200px;
+    padding: 20px;
+    height: auto;
+    background-color: rgba(255,255,255,0.5);
+    top: 15%;
+    left: 5%;
+    position: absolute;
+}
+
+.chatBox{
+    width: 800px;
+    padding: 20px;
+    height: auto;
+    background-color: rgba(255,255,255,0.5);
+    top: 15%;
+    right: 7%;
+    position: absolute;
+}
