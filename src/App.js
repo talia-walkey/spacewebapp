@@ -38,7 +38,7 @@ class App extends Component {
               <button id="chatButton" onClick={this.startChat}>Lets Chat!!</button>
             <div id="topPage">
                 <img src={require('./Image/background.svg')} id="bkgImg" />
-                <div id="welcome" class="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
+                <div id="welcome" className="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
             </div>
 
             <div id="images">
@@ -67,7 +67,7 @@ class App extends Component {
           <div>
             <div id="topPage">
                 <img src={require('./Image/background.svg')} id="bkgImg" />
-                <div id="welcome" class="nameHeading" id="welcomeDiv">Time to Chat!</div>
+                <div id="welcome" className="nameHeading" id="welcomeDiv">Time to Chat!</div>
             </div>
                     
         <div id="chatDiv">
