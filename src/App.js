@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chat from './comp/chat.js';
 import WebFont from 'webfontloader';
-import mySocket from ‘socket.io-client’;
+import mySocket from "socket.io-client";
 
 WebFont.load({
   google: {
