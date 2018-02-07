@@ -21,6 +21,10 @@ class App extends Component {
         this.startChat=this.startChat.bind(this);
     }
     
+    componentDidMount(){
+    	this.socket=mySocket("https://spacesockets.herokuapp.com/");
+    }
+    
     startChat(){
         this.setState({
             tab:1
