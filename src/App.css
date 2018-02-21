@@ -168,3 +168,33 @@
     right: 7%;
     position: absolute;
 }
+/*stickers start */
+
+#display {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background-image: url(./Image/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor:none;
+}
+
+#controls {
+    width:30vw;
+    height:75px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    background-color:#BADD;
+}
+
+#myImg {
+    position:absolute;
+}
+
+.allImgs {
+    position:absolute;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chat from './comp/chat.js';
+import Sticker from './comp/Stickers.js';
 import WebFont from 'webfontloader';
 import mySocket from "socket.io-client";
 
@@ -19,6 +20,7 @@ class App extends Component {
         };
         
         this.startChat=this.startChat.bind(this);
+        this.startSticker=this.startSticker.bind(this);
     }
     
     
@@ -27,12 +29,20 @@ class App extends Component {
             tab:1
         })
     }
+    
+    startSticker(){
+        this.setState({
+            tab:2
+        })
+    }
+    
   render() {
       var comp=null;
       if(this.state.tab ===0){
           comp=(
           <div>
               <button id="chatButton" onClick={this.startChat}>Lets Chat!!</button>
+              <button id="stickerButton" onClick={this.startSticker}>Lets Stick Stuff!!</button>
             <div id="topPage">
                 <img src={require('./Image/background.svg')} id="bkgImg" />
                 <div id="welcome" className="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
@@ -59,7 +69,7 @@ class App extends Component {
           </div>
         
       )
-      }else if(comp=1){
+      }else if(this.state.tab ===1){
           comp=(
           <div>
             <div id="topPage">
@@ -72,7 +82,16 @@ class App extends Component {
         </div>
                 
           </div>
-        
+      )
+      }else if(this.state.tab ===2){
+          comp=(
+          <div>
+                    
+                <div id="chatDiv">
+                    <Sticker/>
+                </div>
+                
+          </div>
       )
       }
     return (
