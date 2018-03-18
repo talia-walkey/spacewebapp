@@ -262,7 +262,7 @@
     position:fixed;
     left:0;
     top:0;
-    background-image: url(./Image/bg.jpeg);
+    background-image: url(./img/mario-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     cursor:none;
