@@ -31,6 +31,8 @@
 	.st25{fill:#00ABC7;}
 	.st26{fill:#EEEFDA;}
 	.st27{fill:#F05643;}
+	.st28{font-family:'FORQUE';}
+	.st29{font-size:48px;}
 </style>
 <linearGradient id="Floor_1_" gradientUnits="userSpaceOnUse" x1="683.5" y1="753.7804" x2="683.5" y2="286.7804">
 	<stop  offset="0" style="stop-color:#A17BBF"/>
@@ -229,4 +231,8 @@
 			l111.7-103.1c5.4-5,12.8-6.3,18.7-3.2l206.3,106.4C356,557.1,356.9,572.9,347.3,581.7z"/>
 	</g>
 </g>
+<text transform="matrix(0.9975 7.069334e-02 -7.069334e-02 0.9975 177.0955 166.7276)" class="st10 st28 st29">CHAT</text>
+<text transform="matrix(1 6.398198e-04 -6.398198e-04 1 1106.0757 167.3643)" class="st10 st28 st29">STICKERS</text>
+<text transform="matrix(1 0 0 1 482.103 140.8844)" class="st10 st28 st29">MAZE</text>
+<text transform="matrix(1 0 0 1 804.103 140.8844)" class="st10 st28 st29">CARDS</text>
 </svg>
