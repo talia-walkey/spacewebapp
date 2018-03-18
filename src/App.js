@@ -4,6 +4,8 @@ import Chat from './comp/chat.js';
 import Sticker from './comp/Stickers.js';
 import WebFont from 'webfontloader';
 import mySocket from "socket.io-client";
+import arcadebg from './img/ArcadeBG.svg';
+
 
 WebFont.load({
   google: {
@@ -16,13 +18,35 @@ class App extends Component {
         super(props);
         
         this.state={
-           tab:0 
+            bio:0,
+            tab: 0
         };
+        
+        this.showAlynna=this.showAlynna.bind(this);
+        this.showTalia=this.showTalia.bind(this);
+        this.exit=this.exit.bind(this);
         
         this.startChat=this.startChat.bind(this);
         this.startSticker=this.startSticker.bind(this);
     }
     
+    showAlynna(){
+        this.setState({
+            bio:1
+        })
+    }
+    
+    showTalia(){
+        this.setState({
+            bio:2
+        })
+    }
+    
+    exit(){
+        this.setState({
+            bio:0
+        })
+    }    
     
     startChat(){
         this.setState({
@@ -37,35 +61,46 @@ class App extends Component {
     }
     
   render() {
+      var bio=null;
+      
+      if(this.state.bio == 1){
+          bio = (
+            <div className="modal">
+                <img src={require('./img/exit.png')} className="exit" onClick={this.exit} /><br/>
+                <img src={require('./img/alynna.jpg')} className="bioImg" />
+                <h1>Alynna Alcira</h1>
+                <p>I am an aspiring UX/UI designer currently studying Digital Design and Development at BCIT. I am a creative and quality driven individual, motivated to create new user experiences. I love to bring my ideas to life, either through graphics and/or websites.</p>
+            </div>
+          )
+      } else if(this.state.bio == 2) {
+          bio = (
+            <div className="modal">
+                <img src={require('./img/exit.png')} className="exit" onClick={this.exit}/><br/>
+                <img src={require('./img/talia.png')} className="bioImg" />
+                <h1>Talia Walkey</h1>
+                <p>I am a marker, developer, and designer with a Digital Design and Development Diploma from British Columbia Institute of Technology! I have skills in everything from design to development of web and mobile applications as well as I have learned the business skills to market them. </p>
+            </div>
+          )          
+      } else {
+          bio = null;
+      }      
+      
       var comp=null;
       if(this.state.tab ===0){
           comp=(
           <div>
               <button id="chatButton" onClick={this.startChat}>Lets Chat!!</button>
               <button id="stickerButton" onClick={this.startSticker}>Lets Stick Stuff!!</button>
-            <div id="topPage">
-                <img src={require('./Image/background.svg')} id="bkgImg" />
-                <div id="welcome" className="nameHeading" id="welcomeDiv">Welcome to our landing page!</div>
-            </div>
-
-            <div id="images">
-                <img src={require('./Image/AlynnaImg.png')} id="aimg" />
-                <img src={require('./Image/TaliaImg.png')} id="timg" />
-            </div>
-
-        <div id="tbioBkg">
-                I am a marker, developer, and designer with a Digital Design and Development Diploma from British Columbia Institute of Technology! I have skills in everything from design to development of web and mobile applications as well as I have learned the business skills to market them. 
-        </div>
-                <h1 id="tname">Talia Walkey</h1>
-                <img src={require('./Image/speechleft.png')} id="speechleft" />
-        <br/>
-        <div id="abioBkg">
-                Hello! I am an aspiring UX/UI designer currently studying Digital Design and Development at BCIT. I am a creative and quality driven individual, motivated to create new user experiences. I love to bring my ideas to life, either through graphics and/or websites.
-        </div>
-                <h1 id="aname">Alynna Alcira</h1>
-
-                <img src={require('./Image/speechright.png')} id="speechright" />
-                
+              
+                <div className="bios">
+                    <button className="btn abio" onClick={this.showAlynna}>Read Bio</button>
+                    <img src={require("./img/logo.svg")} className="logo"/>
+                    <button className="btn tbio" onClick={this.showTalia}>Read Bio</button>
+                </div>
+                <div>
+                {bio}
+                <img src={arcadebg} class="arcadebg"/>
+                </div>
           </div>
         
       )

@@ -1,3 +1,89 @@
+/* NEW CSS */
+.App {
+    text-align: center;
+    background-color: #ccc;
+}
+
+.arcadebg {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0px;
+    display: inline;
+}
+
+.logo {
+    width: 20vw;
+    height: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.bios {
+    display: inline;
+    z-index: 20px;
+    bottom:0;
+}
+
+.btn { 
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: #fbe764;
+    border: solid #003c8f 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.abio {
+    left: 0;
+    top: 0;
+}
+
+.tbio {
+    right: 0;
+    top: 0;
+}
+
+.bioImg {
+    width: 100px;
+    height:auto;
+}
+
+.modal {
+    width: 50vw;
+    height: 320px;
+    padding: 20px;
+    background-color: #fbe764;
+    border-radius: 15px;
+    border: solid #003c8f 4px; 
+    display: inline-block;
+    z-index: 100;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.exit {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+}
+
+/*OLD CSS*/
+
 .App {
     text-align: center;
 }
