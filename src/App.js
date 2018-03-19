@@ -89,17 +89,25 @@ class App extends Component {
       if(this.state.tab ===0){
           comp=(
           <div>
-              <button id="chatButton" onClick={this.startChat}>Lets Chat!!</button>
-              <button id="stickerButton" onClick={this.startSticker}>Lets Stick Stuff!!</button>
-              
                 <div className="bios">
-                    <button className="btn abio" onClick={this.showAlynna}>Read Bio</button>
+                    <button className="btn-bio abio" onClick={this.showAlynna}>Read Bio</button>
                     <img src={require("./img/logo.svg")} className="logo"/>
-                    <button className="btn tbio" onClick={this.showTalia}>Read Bio</button>
+                    <button className="btn-bio tbio" onClick={this.showTalia}>Read Bio</button>
                 </div>
                 <div>
                 {bio}
-                <img src={arcadebg} class="arcadebg"/>
+      
+                    <div className="games">
+                        <button id="chatButton" className="btn chatBtn" onClick={this.startChat}>Play Chat</button>
+      
+                        <button id="mazeButton" className="btn mazeBtn">Play Maze</button>
+      
+                        <button id="cardsButton" className="btn cardsBtn">Play Cards</button>
+      
+                        <button id="stickerButton" className="btn stickerBtn" onClick={this.startSticker}>Play Stickers</button>
+      
+                        <img src={arcadebg} class="arcadebg"/>
+                    </div>
                 </div>
           </div>
         
@@ -120,14 +128,10 @@ class App extends Component {
       )
       }else if(this.state.tab ===2){
           comp=(
-          <div>
-                    
                 <div id="chatDiv">
                     <Sticker/>
                 </div>
-                
-          </div>
-      )
+            )
       }
     return (
       <div className="App">
