@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chat from './comp/chat.js';
 import Sticker from './comp/Stickers.js';
+import Cards from './comp/Cards.js';
 import WebFont from 'webfontloader';
 import mySocket from "socket.io-client";
 import arcadebg from './img/ArcadeBG.svg';
@@ -57,6 +58,12 @@ class App extends Component {
     startSticker(){
         this.setState({
             tab:2
+        })
+    }
+    
+    startCards(){
+        this.setState({
+            tab:3
         })
     }
     
@@ -130,6 +137,12 @@ class App extends Component {
           comp=(
                 <div id="chatDiv">
                     <Sticker/>
+                </div>
+            )
+      }else if(this.state.tab ===3){
+          comp=(
+                <div id="chatDiv">
+                    <Cards/>
                 </div>
             )
       }
