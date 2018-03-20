@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.blackCard {
+    width: 200px;
+    height: auto;
+    background-color: #000;
+    color: white;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+}
+
+.whiteCard {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    border: solid black 2px;
+    margin: 30px;
+    font-size: 12pt;
+}
+
+.winningCard {
+    width: 200px;
+    height: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    background-color: #003274;
+    color: white;
+    border: solid #003274 2px;
+    margin: 30px;
+    font-size: 12pt;
+}
