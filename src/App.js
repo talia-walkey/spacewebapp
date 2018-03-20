@@ -29,6 +29,7 @@ class App extends Component {
         
         this.startChat=this.startChat.bind(this);
         this.startSticker=this.startSticker.bind(this);
+        this.startCards=this.startCards.bind(this);
     }
     
     showAlynna(){
@@ -109,7 +110,7 @@ class App extends Component {
       
                         <button id="mazeButton" className="btn mazeBtn">Play Maze</button>
       
-                        <button id="cardsButton" className="btn cardsBtn">Play Cards</button>
+                        <button id="cardsButton" className="btn cardsBtn" onClick={this.startCards}>Play Cards</button>
       
                         <button id="stickerButton" className="btn stickerBtn" onClick={this.startSticker}>Play Stickers</button>
       
