@@ -3,6 +3,7 @@ import './App.css';
 import Chat from './comp/chat.js';
 import Sticker from './comp/Stickers.js';
 import Cards from './comp/Cards.js';
+import Maze from './comp/Maze.js';
 import WebFont from 'webfontloader';
 import mySocket from "socket.io-client";
 import arcadebg from './img/ArcadeBG.svg';
@@ -30,6 +31,7 @@ class App extends Component {
         this.startChat=this.startChat.bind(this);
         this.startSticker=this.startSticker.bind(this);
         this.startCards=this.startCards.bind(this);
+        this.startMaze=this.startMaze.bind(this);
     }
     
     showAlynna(){
@@ -67,6 +69,12 @@ class App extends Component {
             tab:3
         })
     }
+    
+    startMaze(){
+        this.setState({
+            tab:4
+        })
+    }    
     
   render() {
       var bio=null;
@@ -108,7 +116,7 @@ class App extends Component {
                     <div className="games">
                         <button id="chatButton" className="btn chatBtn" onClick={this.startChat}>Play Chat</button>
       
-                        <button id="mazeButton" className="btn mazeBtn">Play Maze</button>
+                        <button id="mazeButton" className="btn mazeBtn" onClick={this.startMaze}>Play Maze</button>
       
                         <button id="cardsButton" className="btn cardsBtn" onClick={this.startCards}>Play Cards</button>
       
@@ -146,7 +154,14 @@ class App extends Component {
                     <Cards/>
                 </div>
             )
+      }else if(this.state.tab ===4){
+          comp=(
+                <div id="chatDiv">
+                    <Maze/>
+                </div>
+            )
       }
+
     return (
       <div className="App">
             {comp}
