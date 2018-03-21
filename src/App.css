@@ -301,15 +301,6 @@
     cursor:none;
 }
 
-#controls {
-    width:30vw;
-    height:75px;
-    position:fixed;
-    bottom:0;
-    right:0;
-    background-color:#BADD;
-}
-
 #myImg {
     position:absolute;
 }
